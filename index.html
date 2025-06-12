@@ -2,48 +2,113 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog ScrapX</title>
-    <link href="/styles/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link href="/styles/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 </head>
 
-<body class="bg-gray-950 items-center justify-center text-white">
+<body class="bg-gray-950 text-white font-sans">
 
+    <!-- NAVBAR -->
     <header>
-        <nav>
-            <ul class="flex space-x-4 justify-center m-5">
-                <li><a href="#bienvenida" class="hover:underline">Inicio</a></li>
-                <li><a href="#about" class="hover:underline">Acerca de</a></li>
-                <li><a href="/contact.html" class="hover:underline">Contacto</a></li>
-            </ul>
+        <nav class="bg-gray-900 border-b border-gray-700 shadow-sm">
+            <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
+                <a href="/" class="flex items-center space-x-3">
+                    <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+                    <span class="text-2xl font-bold text-white">ScrapX</span>
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center w-10 h-10 justify-center text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <div id="navbar-default"
+                    class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:max-h-full md:overflow-visible md:flex md:space-x-8 w-full md:w-auto">
+                    <ul class="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0">
+                        <li><a href="#bienvenida"
+                                class="block py-2 px-3 text-blue-500 hover:text-blue-400 transition-colors">Inicio</a>
+                        </li>
+                        <li><a href="#about"
+                                class="block py-2 px-3 text-white hover:text-blue-400 transition-colors">Acerca de</a>
+                        </li>
+                        <li><a href="#contacto"
+                                class="block py-2 px-3 text-white hover:text-blue-400 transition-colors">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <div id="bienvenida">
-        <h1 class="text-5xl font-bold text-center">Bienvenido a ScrapX</h1>
-    </div>
+    <!-- HERO / BIENVENIDA -->
+    <section id="bienvenida" class="py-20 text-center bg-gradient-to-b from-gray-950 to-gray-900">
+        <h1 class="text-5xl font-extrabold mb-4">Bienvenido a <span class="text-blue-500">ScrapX</span></h1>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">Una plataforma de análisis inteligente de contenido web para
+            detectar y clasificar acoso en medios informativos.</p>
+    </section>
 
-    <div id="about" class="m-8">
-        <h1 class="text-3xl font-bold mb-5">Acerca de</h1>
-        <p class="text-2xs">ScrapX es una plataforma tecnológica innovadora que permite la recopilación automatizada de noticias desde sitios web mediante técnicas avanzadas de web scraping y su posterior análisis mediante algoritmos de procesamiento de lenguaje natural (NLP). Su objetivo principal es detectar y clasificar contenidos relacionados con casos de acoso digital (laboral, escolar, sexual, entre otros) en medios informativos en línea.</p>
-        <h1 class="text-3xl font-bold mb-5 mt-5">Características</h1>
-        <p class="text-2xs">
-            Extracción automatizada de contenido: Utiliza librerías como Scrapy, Selenium y BeautifulSoup para recolectar datos estructurados de diversas fuentes de noticias.
-            Análisis semántico con NLP: Implementa modelos de lenguaje entrenados para reconocer patrones y palabras clave asociadas a distintos tipos de acoso.
-            Clasificación y almacenamiento inteligente: La información extraída es organizada en una base de datos NoSQL (MongoDB), permitiendo consultas eficientes y visualización estructurada.
+    <!-- ABOUT SECTION -->
+    <section id="about" class="max-w-4xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold mb-6 border-b border-blue-500 pb-2">Acerca de</h2>
+        <p class="text-base text-gray-300 leading-relaxed">
+            ScrapX es una plataforma tecnológica innovadora que permite la recopilación automatizada de noticias desde
+            sitios
+            web mediante técnicas avanzadas de web scraping y su posterior análisis mediante algoritmos de procesamiento
+            de
+            lenguaje natural (NLP). Su objetivo principal es detectar y clasificar contenidos relacionados con casos de
+            acoso
+            digital (laboral, escolar, sexual, entre otros) en medios informativos en línea.
         </p>
-        <h1 class="text-3xl font-bold mb-5 mt-5">Compromiso ético</h1>
-        <p class="text-2xs">ScrapX cumple con políticas claras de seguridad, privacidad de datos y uso ético de la tecnología, asegurando la anonimización de la información recolectada y el respeto por las normativas legales de protección de datos y propiedad intelectual.</p>
-    </div>
 
-    <footer class="flex bg-gray-800 p-5 inset-x-0 bottom-0">
-        <p class="text-gray-500 text-xs text-left mb-2">Contacto</p>
-        <p class="text-gray-500 text-xs text-left mb-6"> 2021150480505@tesjo.edu.mx </p>
-        <p class="text-gray-500 text-center">© 2025 ScrapX. Todos los derechos reservados.</p>
+        <h3 class="text-2xl font-semibold mt-10 mb-4 text-blue-400">Características</h3>
+        <ul class="list-disc pl-6 text-gray-300 space-y-2">
+            <li><strong>Extracción automatizada de contenido:</strong> Utiliza Scrapy, Selenium y BeautifulSoup para
+                recolectar datos estructurados.</li>
+            <li><strong>Análisis semántico con NLP:</strong> Reconoce patrones y palabras clave relacionadas con tipos
+                de acoso.</li>
+            <li><strong>Clasificación y almacenamiento:</strong> Organiza la información en MongoDB para una consulta
+                eficiente y visualización estructurada.</li>
+        </ul>
+
+        <h3 class="text-2xl font-semibold mt-10 mb-4 text-blue-400">Compromiso ético</h3>
+        <p class="text-base text-gray-300 leading-relaxed">
+            ScrapX cumple con políticas claras de seguridad, privacidad y uso ético de la tecnología. Garantiza la
+            anonimización de la información recolectada y respeta las normativas legales de protección de datos y
+            propiedad
+            intelectual.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-gray-900 border-t border-gray-700 py-6 px-4 text-center text-gray-400 text-sm">
+        © 2025 ScrapX. Todos los derechos reservados. Contacto: <a href="mailto:2021150480505@tesjo.edu.mx"
+            class="text-blue-400 hover:underline">2021150480505@tesjo.edu.mx</a>
     </footer>
-
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.querySelector("[data-collapse-toggle]");
+        const menu = document.getElementById("navbar-default");
+
+        let isOpen = false;
+
+        toggleButton.addEventListener("click", () => {
+            if (isOpen) {
+                menu.classList.remove("max-h-[500px]");
+                menu.classList.add("max-h-0");
+            } else {
+                menu.classList.remove("max-h-0");
+                menu.classList.add("max-h-[500px]");
+            }
+            isOpen = !isOpen;
+        });
+    });
+</script>
 
 </html>
