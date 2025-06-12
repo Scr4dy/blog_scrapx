@@ -35,7 +35,10 @@
                                 class="block py-2 px-3 text-blue-500 hover:text-blue-400 transition-colors">Inicio</a>
                         </li>
                         <li><a href="#about"
-                                class="block py-2 px-3 text-white hover:text-blue-400 transition-colors">Acerca de</a>
+                                class="block py-2 px-3 text-white hover:text-blue-400 transition-colors">Sobre nosotros</a>
+                        </li>
+                        <li><a href="#producto"
+                                class="block py-2 px-3 text-white hover:text-blue-400 transition-colors">Producto</a>
                         </li>
                         <li><a href="#contacto"
                                 class="block py-2 px-3 text-white hover:text-blue-400 transition-colors">Contacto</a>
@@ -53,9 +56,9 @@
             detectar y clasificar acoso en medios informativos.</p>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="max-w-4xl mx-auto px-6 py-16">
-        <h2 class="text-3xl font-bold mb-6 border-b border-blue-500 pb-2">Acerca de</h2>
+    <!-- PRODUCT SECTION -->
+    <section id="producto" class="max-w-4xl mx-auto px-6 py-16">
+        <h2 class="text-3xl font-bold mb-6 border-b border-blue-500 pb-2">Producto</h2>
         <p class="text-base text-gray-300 leading-relaxed">
             ScrapX es una plataforma tecnológica innovadora que permite la recopilación automatizada de noticias desde
             sitios
@@ -85,10 +88,64 @@
         </p>
     </section>
 
+    <section id="contacto" class="bg-gray-900 py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-blue-400 mb-6">Contáctanos</h2>
+            <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+                ¿Tienes preguntas o deseas colaborar con ScrapX? Rellena el siguiente formulario o escríbenos
+                directamente.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Formulario moderno con efecto glassmorphism -->
+                <form
+                    class="backdrop-blur-md bg-white/10 border border-gray-700 shadow-xl p-8 rounded-2xl space-y-6 text-white transition-all duration-300">
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium mb-1">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required
+                            class="w-full px-4 py-3 rounded-xl bg-gray-800/70 border border-gray-600 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                            placeholder="Tu nombre completo">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-1">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 rounded-xl bg-gray-800/70 border border-gray-600 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                            placeholder="correo@ejemplo.com">
+                    </div>
+
+                    <div>
+                        <label for="mensaje" class="block text-sm font-medium mb-1">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required
+                            class="w-full px-4 py-3 rounded-xl bg-gray-800/70 border border-gray-600 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                            placeholder="Escribe tu mensaje aquí..."></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition-colors duration-300 font-semibold shadow-md hover:shadow-lg">
+                        Enviar mensaje
+                    </button>
+                </form>
+
+                <!-- Información de contacto -->
+                <div class="flex flex-col justify-center space-y-6 text-gray-300">
+                    <div class="flex items-center space-x-4">
+                        <i class="ti ti-mail text-blue-400 text-2xl"></i>
+                        <span> 2021150480505@tesjo.edu.mx</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i class="ti ti-map-pin text-blue-400 text-2xl"></i>
+                        <span> Carretera Toluca-Atlacomulco KM 44.8 Ejido de San Juan y, San Agustin, 50700 Cdad. de
+                            Jocotitlán, Méx.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer id="contacto" class="bg-gray-900 border-t border-gray-700 py-6 px-4 text-center text-gray-400 text-sm">
-        © 2025 ScrapX. Todos los derechos reservados. Contacto: <a href="mailto:2021150480505@tesjo.edu.mx"
-            class="text-blue-400 hover:underline">2021150480505@tesjo.edu.mx</a>
+    <footer class="bg-gray-900 border-t border-gray-700 py-6 px-4 text-center text-gray-400 text-sm">
+        © 2025 ScrapX. Todos los derechos reservados.
     </footer>
 </body>
 <script>
