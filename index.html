@@ -10,11 +10,11 @@
     <link rel="icon" type="image/x-icon" href="favicon/favicon.webp" />
 </head>
 
-<body class="bg-gray-950 text-white font-sans">
+<body class="bg-gray-950 text-white font-sans pt-20">
 
     <!-- NAVBAR -->
     <header>
-        <nav class="bg-gray-900 border-b border-gray-700 shadow-sm">
+        <nav class="fixed top-0 left-0 w-full z-50 bg-gray-900 border-b border-gray-700 shadow-sm">
             <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4">
                 <a href="/" class="flex items-center space-x-3">
                     <img src="images/logo.webp" class="h-12" alt="ScrapX Logo" />
@@ -22,6 +22,7 @@
                 <button data-collapse-toggle="navbar-default" type="button"
                     class="inline-flex items-center w-10 h-10 justify-center text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
                     aria-controls="navbar-default" aria-expanded="false">
+                    <i class="ti ti-menu-2 text-2xl"></i>
                 </button>
                 <div id="navbar-default"
                     class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:max-h-full md:overflow-visible md:flex md:space-x-8 w-full md:w-auto">
@@ -42,14 +43,14 @@
     </header>
 
     <!-- HERO / BIENVENIDA -->
-    <section id="bienvenida" class="py-20 text-center bg-gradient-to-b from-gray-950 to-gray-900">
+    <section id="bienvenida" class="scroll-mt-20 py-20 text-center bg-gradient-to-b from-gray-950 to-gray-900">
         <h1 class="text-5xl font-extrabold mb-4">Bienvenido a <span class="text-blue-500">ScrapX</span></h1>
         <p class="text-lg text-gray-300 max-w-2xl mx-auto">Tecnología que detecta el acoso digital desde las noticias.
         </p>
     </section>
 
     <!-- PRODUCT SECTION -->
-    <section id="about" class="max-w-4xl mx-auto px-6 py-16">
+    <section id="about" class="scroll-mt-20 max-w-4xl mx-auto px-6 py-16">
         <h2 class="text-3xl font-bold mb-6 border-b border-blue-500 pb-2">Acerca de</h2>
         <h3 class="text-2xl font-semibold mt-10 mb-4 text-blue-400">Introducción</h3>
         <p class="text-base text-gray-300 leading-relaxed">
@@ -147,7 +148,7 @@
         </p>
     </section>
 
-    <section id="contacto" class="bg-gray-900 py-16 px-6">
+    <section id="contacto" class="scroll-mt-20 bg-gray-900 py-16 px-6">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-blue-400 mb-6">Contáctanos</h2>
             <p class="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
@@ -211,6 +212,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         const toggleButton = document.querySelector("[data-collapse-toggle]");
         const menu = document.getElementById("navbar-default");
+        const navLinks = menu.querySelectorAll("a");
 
         let isOpen = false;
 
@@ -224,7 +226,18 @@
             }
             isOpen = !isOpen;
         });
-    });
+
+        // Cierra el menú al hacer clic en un enlace (solo en móvil)
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                if (window.innerWidth < 768 && isOpen) {
+                    menu.classList.remove("max-h-[500px]");
+                    menu.classList.add("max-h-0");
+                    isOpen = false;
+                }
+            });
+        });
+    })
 </script>
 
 </html>

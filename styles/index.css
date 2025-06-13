@@ -198,6 +198,18 @@
   }
 }
 @layer utilities {
+  .fixed {
+    position: fixed;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .z-50 {
+    z-index: 50;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -281,6 +293,9 @@
   }
   .resize {
     resize: both;
+  }
+  .scroll-mt-20 {
+    scroll-margin-top: calc(var(--spacing) * 20);
   }
   .list-disc {
     list-style-type: disc;
@@ -441,6 +456,9 @@
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
