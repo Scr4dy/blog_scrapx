@@ -148,6 +148,23 @@
         </p>
     </section>
 
+    <section id="video" class="bg-gray-950 pb-10 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-blue-400 mb-6">Demostración del Proyecto</h2>
+            <p class="text-gray-300 mb-8">
+                Conoce cómo funciona ScrapX en tiempo real con esta breve demostración en video.
+            </p>
+
+            <div class="relative w-full pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+                <iframe class="absolute top-0 left-0 w-full h-full rounded-xl" src="https://www.youtube.com/embed/cq2IhRHUpNM?si=wKslEFQzlA4RWT1k"
+                    title="Demostración ScrapX" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <section id="contacto" class="scroll-mt-20 bg-gray-900 py-16 px-6">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-blue-400 mb-6">Contáctanos</h2>
@@ -212,7 +229,6 @@
     document.addEventListener("DOMContentLoaded", function () {
         const toggleButton = document.querySelector("[data-collapse-toggle]");
         const menu = document.getElementById("navbar-default");
-        const navLinks = menu.querySelectorAll("a");
 
         let isOpen = false;
 
@@ -226,18 +242,7 @@
             }
             isOpen = !isOpen;
         });
-
-        // Cierra el menú al hacer clic en un enlace (solo en móvil)
-        navLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                if (window.innerWidth < 768 && isOpen) {
-                    menu.classList.remove("max-h-[500px]");
-                    menu.classList.add("max-h-0");
-                    isOpen = false;
-                }
-            });
-        });
-    })
+    });
 </script>
 
 </html>
